@@ -3,7 +3,7 @@ import csv
 def main():
     
     infile = open('customers.csv' , 'r')
-    outfile = open('customers_country' , 'w')
+    outfile = open('customer_country.csv' , 'w')
     csvfile = csv.reader(infile, delimiter=',')
     writer = csv.writer(outfile)
     next(csvfile)
@@ -16,7 +16,6 @@ def main():
         outfile.write("\n")
         count += 1 
 
-    
     print("Number of Customers read from the file: ", count)
 
 main()
